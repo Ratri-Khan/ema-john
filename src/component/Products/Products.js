@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import Cart from '../Cart';
 
 const Products = () => {
     const [products,setProducts] = useState([]);
@@ -29,11 +30,8 @@ const Products = () => {
             }            
            </div>
            <div className='md:w-3/12 h-96 bg-pink-500 text-white font-bold'>
-            <p>Selected Item : {cart.length} </p>
-             <p>Total Price : </p>
-             <p>Total Shipping Charge : </p>
-             <p>Tax : </p>
-          </div>
+              <Cart cart={cart}></Cart>
+           </div>
         
         </div>
     );
